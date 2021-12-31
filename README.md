@@ -7,7 +7,7 @@ This avoids having many scattered documents in multiple places (e.g., some in dr
 ## Usage
 The tools is a combination of vscode plus python. 
 
-*VSCode Side* In your VSCode setting, add the snippets as shown in `.vscode/snippet.code-snippets`. Then you can write your markdown file (see `example.md` as an example) with shortcut like `!t[tab]`. It will expand to `!TODO[start=05:44 2021/12/31;deadline=]`, which automatically records the current timestamp. 
+**VSCode Side** In your VSCode setting, add the snippets as shown in `.vscode/snippet.code-snippets`. Then you can write your markdown file (see `example.md` as an example) with shortcut like `!t[tab]`. It will expand to `!TODO[start=05:44 2021/12/31;deadline=]`, which automatically records the current timestamp. 
 + You can add content after the closing bracket. 
 + You can add the deadline. which can be absolute timestamp like `Nov. 23` or relative like `1d` (in a day), `1w` (in a week) or `eonw` (end of next week).
 + You can add who will do the task. E.g., `!TODO[start=06:16 2021/12/31;deadline=1w;who=yuandong]` means that `yuandong` will finish the task in a week.  
@@ -15,7 +15,7 @@ The tools is a combination of vscode plus python.
 
 Of course you can also use your favorite editor to provide this functionality.  
 
-*Python Side* Finally you can run the following script to create a webpage to review.  
+**Python Side** Finally you can run the following script to create a webpage to review.  
 ```
 python run_plan.py upload
 ``` 
