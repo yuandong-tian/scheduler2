@@ -1,7 +1,10 @@
 # A simple UI and backend for scheduling tasks
+## Summary
+The core idea is to have one markdown file to store status of multiple projects, including reading summary, meeting notes, todo list, idea and thoughts, etc, and create read-only views (e.g., a calendar) for different purposes. 
 
-**Summary**. The core idea is to have one markdown file to store status of multiple projects, including reading summary, meeting notes, todo list, idea and thoughts, etc, and create read-only views for different purposes. This avoids having many scattered documents in multiple places (e.g., some in dropbox, some in google doc, etc.), which often causes headache and frustration. 
+This avoids having many scattered documents in multiple places (e.g., some in dropbox, some in google doc, etc.), which often causes headache and frustration. 
 
+## Usage
 The tools is a combination of vscode plus python. 
 
 In your VSCode setting, add the snippets as shown in `.vscode/snippet.code-snippets`:
