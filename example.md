@@ -1,6 +1,8 @@
 !TODO[start=05:34 2021/12/31;deadline=1w] Finish #reading paper https://arxiv.org/abs/1706.03762
 !TODO[start=05:36 2021/12/31;deadline=eod;who=intern] Implementing the fancy new idea. 
 
+!DONE[06:28 2021/12/01;it works great] !TODO[start=06:28 2021/11/21;deadline=1w] Getting the idea working #current_proj 
+
 !DELAY[start=05:37 2021/12/31;deadline=1m;reason=too much work,just want to take a rest in the new year] !TODO[start=12:37 2021/12/20;deadline=1w] Finish reading 100 papers.    
 
 !CANCEL[05:40 2021/12/31;replan to next year] !TODO[start=05:40 2021/12/15;deadline=2w] Stay up late to meet the deadline
