@@ -1,4 +1,5 @@
 !TODO[start=05:34 2021/12/31;deadline=1w] Finish #reading paper https://arxiv.org/abs/1706.03762
+
 !TODO[start=05:36 2021/12/31;deadline=eod;who=intern] Implementing the fancy new idea. 
 
 !DONE[06:28 2021/12/01;it works great] !TODO[start=06:28 2021/11/21;deadline=1w] Getting the idea working #current_proj 
@@ -8,13 +9,19 @@
 !CANCEL[05:40 2021/12/31;replan to next year] !TODO[start=05:40 2021/12/15;deadline=2w] Stay up late to meet the deadline
 
 !NOTE[start=05:38 2021/12/31] Meeting #scale_model_to_1trillion_parameters
+
 !TODO[start=05:39 2021/12/31;deadline=eonw;who=PM] Ask for more resource 
+
 !TODO[start=05:39 2021/12/31;deadline=2d] Write a concrete plan  
+
 !END
 
 !NOTE[start=05:42 2021/12/31] Read paper #reading https://www.nature.com/articles/nature14539
+
 Blahblahblah...
+
 !TODO[start=05:43 2021/12/31;deadline=2w] follow-up discussion  
+
 !END
 
 !TODO[start=05:59 2021/12/31;deadline=eow] Read book #relax
