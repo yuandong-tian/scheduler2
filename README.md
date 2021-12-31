@@ -16,3 +16,5 @@ It will create `data.js`. View your calender by opening `run.html`. The UI is bo
 
 If you want to deploy it to the http server that support php, replace `run_ftp` function with the uploading code snippets in `run_plan.py`. Also use `run.php` instead. It allows adding notes on the webpage and save it on the server side.  
 
+# License 
+MIT
