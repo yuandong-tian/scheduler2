@@ -1,0 +1,88 @@
+<head>
+  <link rel="stylesheet" href="run.css">
+</head>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.5.1/moment.min.js"></script>
+
+<table border="0" cellspacing="10px" cellpadding="10px">
+  <tbody>
+  <tr valign="top">
+    <td>
+      <div id="calendar"></div>
+      <div id="legend"></div> 
+    </td>
+    <td width="500px">
+      <select id="userMenu"></select>
+      <select id="hashtagMenu"></select>
+      <br><br><br>
+      <p><b>TODO for a particular hashtag</b></p>
+      <div id="comments">
+      </div>
+      <p><b>Past-due tasks for ALL hashtags</b>
+      <select id="past-due-user-menu" style="height: 30px; float: right;">
+        <option>*</option>
+      </select>
+      </p>
+      <div id="past-due"> 
+      </div>
+      <p><b>New items</b></p>
+      <select id="new-item-type" style="height: 70px">
+        <option>TODO</option>
+        <option>NOTE</option>
+      </select>
+      <button id="new-item-add" style="width:70px; height: 70px" onclick="add_item();" ><font size="+2">Add</font></button>
+      <!-- <button id="save" style="width:70px; height: 70px;" >Save</button> -->
+      <textarea id="cpp_content" rows="15" cols="60" onchange="save_files();"></textarea> 
+    </td>
+    <td>
+      <iframe src="http://localhost:5000" width="1300" height="1100" style="background-color: aliceblue;"></iframe>
+    </td>
+  </tr>
+  </tbody>
+</table>
+
+<script type="text/javascript" language="javascript">  
+function add_item() {
+  // Create an item and add it to the rich text.
+  var userMenu = document.querySelector("#userMenu");
+  var tagMenu = document.querySelector("#hashtagMenu");
+  var typeMenu = document.querySelector("#new-item-type");
+
+  var current = moment();
+  var content = "!" + typeMenu.value + "[";
+  content = content + "start=" + current.format("HH:mm YYYY/MM/DD"); 
+  if (typeMenu.value === "TODO") {
+    content = content + ";who=" + userMenu.value + ";deadline=";
+  }
+  content = content + "] ";
+  if (tagMenu.value !== "*") {
+    content = content + "#" + tagMenu.value;
+  }
+
+  var contentBox = document.querySelector("#cpp_content");
+  // console.log("Newly appending content: " + content);
+  contentBox.value += "\n" + content;
+  // console.log("Current content after appending: " + contentBox.value);
+}
+</script>
+
+<script type="text/javascript" language="javascript">  
+  var versionUpdate = (new Date()).getTime();  
+  var script = document.createElement("script");  
+  script.type = "text/javascript";  
+  script.src = "data.js?v=" + versionUpdate;  
+  document.body.appendChild(script);  
+
+  var script2 = document.createElement("script");  
+  script2.type = "text/javascript";  
+  script2.src = "run_template.js?v=" + versionUpdate;  
+  document.body.appendChild(script2);  
+
+  window.addEventListener('load', function() {
+    var calendar = new Calendar('#calendar', data, data_by_hashtag, globalVariables);
+    var contentArea = document.querySelector('#cpp_content');
+    if (typeof php_info !== "undefined") {
+      contentArea.innerHTML = php_info["content"];
+    }
+  });
+</script> 

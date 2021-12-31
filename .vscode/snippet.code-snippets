@@ -1,0 +1,76 @@
+{
+    "Add TODO": {
+        "scope": "markdown",
+        "prefix": [
+            "!t",
+            "!todo"
+        ],
+        "body": [
+            "!TODO[start=$CURRENT_HOUR:$CURRENT_MINUTE $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE;deadline=$1] $2",
+        ],
+        "description": "Add TODO"
+    },
+    "Set Done": {
+        "scope": "markdown",
+        "prefix": [
+            "!d",
+            "!done"
+        ],
+        "body": [
+            "!DONE[$CURRENT_HOUR:$CURRENT_MINUTE $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE;$1] ",
+        ],
+        "description": "Set Done"
+    },
+    "Set Done Note": {
+        "scope": "markdown",
+        "prefix": [
+            "!dn"
+        ],
+        "body": [
+            "!DONE_NOTE[$CURRENT_HOUR:$CURRENT_MINUTE $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE] $1",
+        ],
+        "description": "Set Done Note"
+    },
+    "Set End": {
+        "scope": "markdown",
+        "prefix": [
+            "!e"
+        ],
+        "body": [
+            "!END"
+        ],
+        "description": "Set END"
+    },
+    "Set Delay": {
+        "scope": "markdown",
+        "prefix": [
+            "!delay"
+        ],
+        "body": [
+            "!DELAY[start=$CURRENT_HOUR:$CURRENT_MINUTE $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE;deadline=$1;reason=$2] $3",
+        ],
+        "description": "Set Delay"
+    },
+    "Set Cancel": {
+        "scope": "markdown",
+        "prefix": [
+            "!c",
+            "!cancel"
+        ],
+        "body": [
+            "!CANCEL[$CURRENT_HOUR:$CURRENT_MINUTE $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE;$1] ",
+        ],
+        "description": "Set Cancel"
+    },
+    "Add note": {
+        "scope": "markdown",
+        "prefix": [
+            "!n",
+            "!note"
+        ],
+        "body": [
+            "!NOTE[start=$CURRENT_HOUR:$CURRENT_MINUTE $CURRENT_YEAR/$CURRENT_MONTH/$CURRENT_DATE] ",
+        ],
+        "description": "Add note"
+    },
+}
